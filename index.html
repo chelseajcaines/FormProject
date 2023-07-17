@@ -1,143 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FormProject</title>
+        <title>FormProject</title>
 
-    <!--Google fonts-->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-    />
+        <!--Google fonts-->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+        />
 
-    <!--Style Sheet-->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+        <!--Style Sheet-->
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-  <body>
-    <main>
-      <!--Left area with backround image and logo-->
-      <div class="left-side"></div>
-      <!--Right area with form information-->
-      <div class="right-side">
-        <section>
-          <header>
-            <div class="intro">
-              <p>
-                This is not a real online service! You know you need something
-                like this in your life to help you realize your deepest dreams.
-              </p>
-              <p>
-                Sign up
-                <span>now</span>
-                to get started.
-              </p>
-              <br />
-              <p>
-                You
-                <span>know</span>
-                you want to.
-              </p>
+    <body>
+        <main>
+            <!--Left area with backround image and logo-->
+            <div class="left-side"></div>
+
+            <!--Right area with form information-->
+            <div class="right-side">
+                <section>
+                    <header>
+                        <div class="intro">
+                            <p>
+                                This is not a real online service! You know you
+                                need something like this in your life to help
+                                you realize your deepest dreams.
+                            </p>
+                            <p>
+                                Sign up
+                                <span>now</span>
+                                to get started.
+                            </p>
+                            <br />
+                            <p>
+                                You
+                                <span>know</span>
+                                you want to.
+                            </p>
+                        </div>
+                    </header>
+                    <div class="mid-section">
+                        <h1>Let's do this!</h1>
+                        <form action="https://httpbin.org/post" method="post">
+                            <fieldset>
+                                <!-- Column 1 -->
+                                <div class="col-1">
+                                    <!-- First Name -->
+                                    <div class="input-box">
+                                        <label for="first_name">
+                                            First Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="first-name-input"
+                                            placeholder="First Name"
+                                            name="first_name"
+                                        />
+                                        <p
+                                            class="hide error"
+                                            id="first-name-error"
+                                        >
+                                            * Required field
+                                        </p>
+                                    </div>
+                                    <!-- EMAIL -->
+                                    <div class="input-box">
+                                        <label for="user_email">EMAIL</label>
+                                        <input
+                                            type="email"
+                                            id="email-input"
+                                            placeholder="name@email.com"
+                                            name="email"
+                                        />
+                                        <p class="hide error" id="email-error">
+                                            Please enter valid email address
+                                        </p>
+                                    </div>
+                                    <!-- Password -->
+                                    <div class="input-box">
+                                        <label for="user_password"
+                                            >Password</label
+                                        >
+                                        <input
+                                            type="password"
+                                            id="password-input"
+                                            placeholder="enter password"
+                                            name="password"
+                                        />
+                                        <p
+                                            class="hide error"
+                                            id="password-error"
+                                        >
+                                            Password must conatin at least 6
+                                            characters
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="col-2">
+                                    <!-- Last Name -->
+                                    <div class="input-box">
+                                        <label for="last_name">Last Name</label>
+                                        <input
+                                            type="text"
+                                            id="last-name-input"
+                                            placeholder="Last Name"
+                                            name="last_name"
+                                        />
+                                        <p
+                                            class="hide error"
+                                            id="last-name-error"
+                                        >
+                                            * Required field
+                                        </p>
+                                    </div>
+                                    <!-- Phone Number -->
+                                    <div class="input-box">
+                                        <label for="phone">Phone Number</label>
+                                        <input
+                                            type="tel"
+                                            id="phone-number-input"
+                                            placeholder="phone number"
+                                            name="phone"
+                                        />
+                                        <p class="hide error" id="phone-error">
+                                            * Required field
+                                        </p>
+                                    </div>
+                                    <!-- Confirm Password -->
+                                    <div class="input-box">
+                                        <label for="password"
+                                            >Confirm Password</label
+                                        >
+                                        <input
+                                            type="password"
+                                            id="confirm-password-input"
+                                            placeholder="confirm password"
+                                            name="password"
+                                        />
+                                        <p
+                                            class="hide error"
+                                            id="confirm-password-error"
+                                        >
+                                            Passwords do not match
+                                        </p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <footer>
+                        <button id="create-button">Create Account</button>
+                        <div class="foot-note">
+                            <p class="log-in">
+                                Already have an account?
+                                <span>
+                                    <button id="log-in-button">
+                                        <strong>Log in</strong>
+                                    </button>
+                                </span>
+                            </p>
+                        </div>
+                    </footer>
+                </section>
             </div>
-          </header>
-          <div class="mid-section">
-            <h1>Let's do this!</h1>
-            <form action="https://httpbin.org/post" method="post">
-              <fieldset>
-                <div class="col-1">
-                  <div class="input-box">
-                    <label for="first_name">First Name</label>
-                    <input
-                      type="text"
-                      id="first-name-input"
-                      placeholder="First Name"
-                      name="first_name"
-                    />
-                    <p class="hide error" id="first-name-error">
-                      Please enter first name
-                    </p>
-                  </div>
-                  <div class="input-box">
-                    <label for="user_email">EMAIL</label>
-                    <input
-                      type="email"
-                      id="email-input"
-                      placeholder="name@email.com"
-                      name="email"
-                    />
-                    <p class="hide error" id="email-error">
-                      Please enter valid email address
-                    </p>
-                  </div>
-                  <div class="input-box">
-                    <label for="user_password">Password</label>
-                    <input
-                      type="password"
-                      id="password-input"
-                      placeholder="enter password"
-                      name="password"
-                    />
-                    <p class="hide error" id="password-error">
-                      Password must conatin at least 6 characters
-                    </p>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="input-box">
-                    <label for="last_name">Last Name</label>
-                    <input
-                      type="text"
-                      id="last-name-input"
-                      placeholder="Last Name"
-                      name="last_name"
-                    />
-                    <p class="hide error" id="last-name-error">
-                      Please enter last name
-                    </p>
-                  </div>
-                  <div class="input-box">
-                    <label for="phone">Phone Number</label>
-                    <input
-                      type="tel"
-                      id="phone-number-input"
-                      placeholder="phone number"
-                      name="phone"
-                    />
-                    <p class="hide error" id="phone-error">
-                      Please enter a phone number
-                    </p>
-                  </div>
-                  <div class="input-box">
-                    <label for="password">Confirm Password</label>
-                    <input
-                      type="password"
-                      id="confirm-password-input"
-                      placeholder="confirm password"
-                      name="password"
-                    />
-                    <p class="hide error" id="confirm-password-error">
-                      Passwords do not match
-                    </p>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-          <footer>
-            <button id="create-button">Create Account</button>
-            <div class="foot-note">
-              <p class="log-in">
-                Already have an account?
-                <span>
-                  <button id="log-in-button"><strong>Log in</strong></button>
-                </span>
-              </p>
-            </div>
-          </footer>
-        </section>
-      </div>
-    </main>
-  </body>
+        </main>
+    </body>
+
+    <!--JavaScript Code-->
+    <script src="script.js"></script>
 </html>

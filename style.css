@@ -1,46 +1,70 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 body {
-  background-color: #f7f9fd;
+    background-color: #f7f9fd;
 }
 main {
-  width: 90%;
-  font-size: 16px;
-  max-width: 43.75em;
-  margin: 1em auto;
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
 }
 span {
-  font-style: italic;
+    font-style: italic;
 }
 #create-button {
-  font-size: 1em;
-  margin-top: 0.8em;
-  background-color: #587ef4;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 0.6em 1.2em;
-  border-radius: 0.3em;
-  cursor: pointer;
+    font-size: 1em;
+    margin-top: 0.8em;
+    background-color: #587ef4;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0.6em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
 }
 #create-button:hover {
-  background-color: #264bb9;
+    background-color: #264bb9;
 }
 #log-in-button {
-  border: none;
-  background: transparent;
-  font-size: 1em;
-  color: #264bb9;
-  cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1em;
+    color: #264bb9;
+    cursor: pointer;
 }
 #log-in-button:hover {
-  color: #a5b9f5;
+    color: #a5b9f5;
 }
 fieldset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+fieldset input {
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+fieldset input:hover {
+    border-color: #587ef4;
+}
+fieldset input:focus {
+    border-color: #587ef4;
+}
+.hide {
+    display: none;
+}
+.error {
+    color: #ff465a;
+    font-size: 12px;
 }
