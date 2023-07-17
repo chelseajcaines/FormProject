@@ -58,8 +58,9 @@
                                         <input
                                             type="text"
                                             id="first-name-input"
-                                            placeholder="First Name"
+                                            placeholder="Jane"
                                             name="first_name"
+                                            maxlength="32"
                                         />
                                         <p
                                             class="hide error"
@@ -74,7 +75,7 @@
                                         <input
                                             type="email"
                                             id="email-input"
-                                            placeholder="name@email.com"
+                                            placeholder="example@website.com"
                                             name="email"
                                         />
                                         <p class="hide error" id="email-error">
@@ -89,15 +90,16 @@
                                         <input
                                             type="password"
                                             id="password-input"
-                                            placeholder="enter password"
+                                            placeholder="must be 6-20 characters"
                                             name="password"
+                                            minlength="6"
+                                            maxlength="20"
                                         />
                                         <p
                                             class="hide error"
                                             id="password-error"
                                         >
-                                            Password must conatin at least 6
-                                            characters
+                                            Password must be 6-20 characters
                                         </p>
                                     </div>
                                 </div>
@@ -109,8 +111,9 @@
                                         <input
                                             type="text"
                                             id="last-name-input"
-                                            placeholder="Last Name"
+                                            placeholder="Doe"
                                             name="last_name"
+                                            maxlength="32"
                                         />
                                         <p
                                             class="hide error"
@@ -125,8 +128,9 @@
                                         <input
                                             type="tel"
                                             id="phone-number-input"
-                                            placeholder="phone number"
+                                            placeholder="555-555-5555"
                                             name="phone"
+                                            pattern="(\d{3}([\-]\d{3}([\-]\d{4})?)?)"
                                         />
                                         <p class="hide error" id="phone-error">
                                             * Required field
@@ -140,7 +144,7 @@
                                         <input
                                             type="password"
                                             id="confirm-password-input"
-                                            placeholder="confirm password"
+                                            placeholder="re-enter password"
                                             name="password"
                                         />
                                         <p

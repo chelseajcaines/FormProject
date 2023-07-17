@@ -18,32 +18,36 @@ const enterUserInfo = () => {
     if (!firstNameInput.value) {
         firstNameError.classList.remove("hide")
         firstNameInput.value = ""
-        return false
     }
     if (!lastNameInput.value) {
         lastNameError.classList.remove("hide")
         lastNameInput.value = ""
-        return false
     }
     if (!emailInput.value) {
         emailError.classList.remove("hide")
         emailInput.value = ""
-        return false
     }
     if (!phoneNumberInput.value) {
         phoneError.classList.remove("hide")
         phoneNumberInput.value = ""
-        return false
     }
     if (!passwordInput.value) {
         passwordError.classList.remove("hide")
         passwordInput.value = ""
-        return false
     }
     if (!confirmPasswordInput.value) {
         confirmPasswordError.classList.remove("hide")
         confirmPasswordInput.value = ""
-        return false
+    } else {
+        if (
+            firstNameInput.value === firstNameInput.value &&
+            lastNameInput.value === lastNameInput.value &&
+            emailInput.value === emailInput.value &&
+            phoneNumberInput.value === phoneNumberInput.value &&
+            passwordInput.value === passwordInput.value &&
+            confirmPasswordInput.value === passwordInput.value
+        )
+            alert("You have now created your account")
     }
 }
 
@@ -98,12 +102,18 @@ lastNameInput.addEventListener("click", () => {
 emailInput.addEventListener("click", () => {
     emailError.classList.add("hide")
 })
-phoneNumberInputInput.addEventListener("click", () => {
+phoneNumberInput.addEventListener("click", () => {
     phoneError.classList.add("hide")
 })
-passwordInputInput.addEventListener("click", () => {
+passwordInput.addEventListener("click", () => {
     passwordError.classList.add("hide")
 })
 confirmPasswordInput.addEventListener("click", () => {
     confirmPasswordError.classList.add("hide")
 })
+
+const goToLogin = () => {
+    alert("Great to see you again!")
+}
+//clicking the 'log in' button
+logInButton.addEventListener("click", () => goToLogin())

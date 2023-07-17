@@ -65,6 +65,16 @@ fieldset input:focus {
     display: none;
 }
 .error {
-    color: #ff465a;
+    color: red;
     font-size: 12px;
+}
+fieldset input .error {
+    border-color: red;
+}
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: #d0d0d0;
 }
