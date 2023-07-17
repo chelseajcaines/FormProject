@@ -61,6 +61,7 @@ fieldset input:hover {
 fieldset input:focus {
     border-color: #587ef4;
 }
+
 .hide {
     display: none;
 }
@@ -71,6 +72,7 @@ fieldset input:focus {
 fieldset input .error {
     border-color: red;
 }
+
 input:invalid {
     border-color: red;
 }
