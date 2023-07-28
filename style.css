@@ -102,6 +102,3 @@ fieldset input:hover {
 input:invalid {
     border-color: #f50606;
 }
-.hide {
-    display: none;
-}

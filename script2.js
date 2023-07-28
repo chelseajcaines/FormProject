@@ -13,9 +13,8 @@ function checkPassword() {
         if (passwordInput != confirmPasswordInput) {
             message.textContent = "Password does not match"
             message.style.color = "#f50606"
-        }
-        if (passwordInput == confirmPasswordInput) {
-            message.textContent = ""
+        } else {
+            alert("You have created your account")
         }
     }
 }
