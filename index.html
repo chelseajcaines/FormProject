@@ -21,38 +21,32 @@
             <header>Sign Up Below</header>
             <hr />
             <div class="user-content">
-                <form id="form" action="https://httpbin.org/post" method="post">
+                <form action="#" method="GET">
                     <fieldset>
                         <!-- First Name -->
                         <div class="input-box">
-                            <label for="first_name"> First Name </label>
+                            <label for="first-name"> First Name </label>
                             <input
                                 type="text"
-                                id="first_name"
+                                id="first-name"
                                 placeholder="Jane"
-                                name="first_name"
+                                name="first-name"
                                 maxlength="32"
                                 required
                             />
-                            <p class="hide error" id="first-name-error">
-                                * Required field
-                            </p>
                         </div>
 
                         <!-- Last Name -->
                         <div class="input-box">
-                            <label for="last_name">Last Name</label>
+                            <label for="last-name">Last Name</label>
                             <input
                                 type="text"
-                                id="last_name"
+                                id="last-name"
                                 placeholder="Doe"
-                                name="last_name"
+                                name="last-name"
                                 maxlength="32"
                                 required
                             />
-                            <p class="hide error" id="last-name-error">
-                                * Required field
-                            </p>
                         </div>
 
                         <!-- EMAIL -->
@@ -65,9 +59,6 @@
                                 name="email"
                                 required
                             />
-                            <p class="hide error" id="email-error">
-                                Please enter valid email address
-                            </p>
                         </div>
 
                         <!-- Phone Number -->
@@ -76,14 +67,11 @@
                             <input
                                 type="tel"
                                 id="phone"
-                                placeholder="555-555-5555"
+                                placeholder="enter 10 digit number"
                                 name="phone"
-                                pattern="(\d{3}([\-]\d{3}([\-]\d{4})?)?)"
+                                pattern="[0-9]{10}"
                                 required
                             />
-                            <p class="hide error" id="phone-error">
-                                * Required field
-                            </p>
                         </div>
 
                         <!-- Password -->
@@ -98,9 +86,6 @@
                                 maxlength="20"
                                 required
                             />
-                            <p class="hide error" id="password-error">
-                                Password must be 6-20 characters
-                            </p>
                         </div>
 
                         <!-- Confirm Password -->
@@ -113,15 +98,15 @@
                                 name="password"
                                 required
                             />
-                            <p class="hide error" id="confirm-password-error">
-                                Passwords do not match
-                            </p>
+                            <p id="message"></p>
                         </div>
                     </fieldset>
+                    <button type="submit" id="submit" onclick="checkPassword()">
+                        Create Account
+                    </button>
                 </form>
             </div>
             <footer>
-                <button type="submit" id="create-button">Create Account</button>
                 <div class="foot-note">
                     <p class="log-in">
                         Already have an account?

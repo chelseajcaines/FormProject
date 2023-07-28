@@ -1,49 +1,47 @@
-const firstNameInput = document.getElementById("first_name")
-const firstNameError = document.getElementById("first-name-error")
-const lastNameInput = document.getElementById("last_name")
-const lastNameError = document.getElementById("last-name-error")
+const firstNameInput = document.getElementById("first-name")
+const lastNameInput = document.getElementById("last-name")
 const emailInput = document.getElementById("email")
-const emailError = document.getElementById("email-error")
 const phoneNumberInput = document.getElementById("phone")
-const phoneError = document.getElementById("phone-error")
 const passwordInput = document.getElementById("password")
-const passwordError = document.getElementById("password-error")
 const confirmPasswordInput = document.getElementById("confirm")
-const confirmPasswordError = document.getElementById("confirm-password-error")
-const createButton = document.getElementById("create-button")
 const logInButton = document.getElementById("log-in-button")
-const form = document.getElementById("form")
+const createButton = document.getElementById("submit")
+const message = document.getElementById("message")
 
-form.addEventListener("submit", (e) => {
-    if (firstNameInput === "" || firstNameInput == null) {
-        firstNameError.classList.remove("hide")
+function checkPassword() {
+    if (passwordInput.length != 0) {
+        if (passwordInput != confirmPasswordInput) {
+            message.textContent = "Password does not match"
+            message.style.color = "#f50606"
+        }
+        if (passwordInput == confirmPasswordInput) {
+            message.textContent = ""
+        }
     }
-    if (lastNameInput === "" || lastNameInput == null) {
-        lastNameError.classList.remove("hide")
-    }
-    if (emailInput === "" || emailInput == null) {
-        emailError.classList.remove("hide")
-    }
-    if (phoneNumberInput === "" || phoneNumberInput == null) {
-        phoneError.classList.remove("hide")
-    }
+}
+const enterUserInfo = () => {
+    //If every field is entered correctly
     if (
-        passwordInput === "" ||
-        passwordInput == null ||
-        passwordInput.value.length < 6 ||
-        passwordInput.value.length > 20
+        firstNameInput.value &&
+        lastNameInput.value &&
+        emailInput.value &&
+        phoneNumberInput.value &&
+        passwordInput.value &&
+        passwordInput == confirmPasswordInput.value
     ) {
-        passwordError.classList.remove("hide")
-        passwordInput.value = ""
+        alert("You have created your account")
+
+        //If something is left out or not entered correctly
+    } else {
+        alert("Please enter every field correctly")
     }
-    if (
-        confirmPasswordInput === "" ||
-        confirmPasswordInput == null ||
-        confirmPasswordInput.value.length < 6 ||
-        confirmPasswordInput.value.length > 20 ||
-        confirmPasswordInput.value != passwordInput.value
-    ) {
-        confirmPasswordError.classList.remove("hide")
-        confirmPasswordInput.value = ""
-    }
-})
+}
+
+//clicking the 'create account' button
+createButton.addEventListener("click", () => enterUserInfo())
+
+const goToLogin = () => {
+    alert("Great to see you again!")
+}
+//clicking the 'log in' button
+logInButton.addEventListener("click", () => goToLogin())
