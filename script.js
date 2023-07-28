@@ -1,14 +1,14 @@
-const firstNameInput = document.getElementById("first-name-input")
+const firstNameInput = document.getElementById("first_name")
 const firstNameError = document.getElementById("first-name-error")
-const lastNameInput = document.getElementById("last-name-input")
+const lastNameInput = document.getElementById("last_name")
 const lastNameError = document.getElementById("last-name-error")
-const emailInput = document.getElementById("email-input")
+const emailInput = document.getElementById("email")
 const emailError = document.getElementById("email-error")
-const phoneNumberInput = document.getElementById("phone-number-input")
+const phoneNumberInput = document.getElementById("phone")
 const phoneError = document.getElementById("phone-error")
-const passwordInput = document.getElementById("password-input")
+const passwordInput = document.getElementById("password")
 const passwordError = document.getElementById("password-error")
-const confirmPasswordInput = document.getElementById("confirm-password-input")
+const confirmPasswordInput = document.getElementById("confirm")
 const confirmPasswordError = document.getElementById("confirm-password-error")
 const createButton = document.getElementById("create-button")
 const logInButton = document.getElementById("log-in-button")
@@ -31,10 +31,15 @@ const enterUserInfo = () => {
         phoneError.classList.remove("hide")
         phoneNumberInput.value = ""
     }
-    if (!passwordInput.value) {
+    if (
+        !passwordInput.value ||
+        passwordInput.value.length < 6 ||
+        passwordInput.value.length > 20
+    ) {
         passwordError.classList.remove("hide")
         passwordInput.value = ""
     }
+
     if (!confirmPasswordInput.value) {
         confirmPasswordError.classList.remove("hide")
         confirmPasswordInput.value = ""

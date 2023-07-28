@@ -21,14 +21,14 @@
             <header>Sign Up Below</header>
             <hr />
             <div class="user-content">
-                <form action="https://httpbin.org/post" method="post">
+                <form id="form" action="https://httpbin.org/post" method="post">
                     <fieldset>
                         <!-- First Name -->
                         <div class="input-box">
                             <label for="first_name"> First Name </label>
                             <input
                                 type="text"
-                                id="first-name-input"
+                                id="first_name"
                                 placeholder="Jane"
                                 name="first_name"
                                 maxlength="32"
@@ -44,7 +44,7 @@
                             <label for="last_name">Last Name</label>
                             <input
                                 type="text"
-                                id="last-name-input"
+                                id="last_name"
                                 placeholder="Doe"
                                 name="last_name"
                                 maxlength="32"
@@ -57,10 +57,10 @@
 
                         <!-- EMAIL -->
                         <div class="input-box">
-                            <label for="user_email">EMAIL</label>
+                            <label for="email">EMAIL</label>
                             <input
                                 type="email"
-                                id="email-input"
+                                id="email"
                                 placeholder="example@website.com"
                                 name="email"
                                 required
@@ -75,7 +75,7 @@
                             <label for="phone">Phone Number</label>
                             <input
                                 type="tel"
-                                id="phone-number-input"
+                                id="phone"
                                 placeholder="555-555-5555"
                                 name="phone"
                                 pattern="(\d{3}([\-]\d{3}([\-]\d{4})?)?)"
@@ -88,10 +88,10 @@
 
                         <!-- Password -->
                         <div class="input-box">
-                            <label for="user_password">Password</label>
+                            <label for="password">Password</label>
                             <input
                                 type="password"
-                                id="password-input"
+                                id="password"
                                 placeholder="must be 6-20 characters"
                                 name="password"
                                 minlength="6"
@@ -105,10 +105,10 @@
 
                         <!-- Confirm Password -->
                         <div class="input-box">
-                            <label for="password">Confirm Password</label>
+                            <label for="confirm">Confirm Password</label>
                             <input
                                 type="password"
-                                id="confirm-password-input"
+                                id="confirm"
                                 placeholder="re-enter password"
                                 name="password"
                                 required
@@ -121,7 +121,7 @@
                 </form>
             </div>
             <footer>
-                <button id="create-button">Create Account</button>
+                <button type="submit" id="create-button">Create Account</button>
                 <div class="foot-note">
                     <p class="log-in">
                         Already have an account?
@@ -137,5 +137,5 @@
     </body>
 
     <!--JavaScript Code-->
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </html>
