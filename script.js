@@ -40,14 +40,14 @@ const enterUserInfo = () => {
         confirmPasswordInput.value = ""
     } else {
         if (
-            firstNameInput.value === firstNameInput.value &&
-            lastNameInput.value === lastNameInput.value &&
-            emailInput.value === emailInput.value &&
-            phoneNumberInput.value === phoneNumberInput.value &&
-            passwordInput.value === passwordInput.value &&
-            confirmPasswordInput.value === passwordInput.value
-        )
+            firstNameInput.value &&
+            lastNameInput.value &&
+            emailInput.value &&
+            phoneNumberInput.value &&
+            passwordInput.value === confirmPasswordInput.value
+        ) {
             alert("You have now created your account")
+        }
     }
 }
 
