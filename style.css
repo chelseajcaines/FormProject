@@ -2,32 +2,80 @@
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
+    box-sizing: border-box;
 }
 body {
-    background-color: #f7f9fd;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 main {
-    width: 90%;
-    font-size: 16px;
-    max-width: 43.75em;
-    margin: 1em auto;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-span {
-    font-style: italic;
+header {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.user-content form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+.input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+fieldset .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+fieldset input:focus,
+fieldset input:valid {
+    border-color: #ccc;
+}
+fieldset input:hover {
+    border-color: #587ef4;
 }
 #create-button {
-    font-size: 1em;
-    margin-top: 0.8em;
-    background-color: #587ef4;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    padding: 0.6em 1.2em;
-    border-radius: 0.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 35px 0;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: #9b59b6;
 }
 #create-button:hover {
-    background-color: #264bb9;
+    background-color: #71b7e6;
 }
 #log-in-button {
     border: none;
@@ -39,28 +87,11 @@ span {
 #log-in-button:hover {
     color: #a5b9f5;
 }
-fieldset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
+.log-in {
+    margin-left: 195px;
+    margin-right: 105px;
 }
-fieldset input {
-    display: block;
-    width: 100%;
-    padding: 0.6em 0.3em;
-    border: 1px solid #d0d0d0;
-    border-radius: 0.3em;
-    color: #414a67;
-    outline: none;
-    font-weight: 400;
-    margin-bottom: 0.6em;
-}
-fieldset input:hover {
-    border-color: #587ef4;
-}
-fieldset input:focus {
-    border-color: #587ef4;
-}
+
 .hide {
     display: none;
 }
@@ -68,13 +99,7 @@ fieldset input:focus {
     color: red;
     font-size: 12px;
 }
-fieldset input .error {
-    border-color: red;
-}
+
 input:invalid {
     border-color: red;
-}
-
-input:valid {
-    border-color: #d0d0d0;
 }
