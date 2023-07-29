@@ -13,6 +13,7 @@ const confirmPasswordError = document.getElementById("confirm-password-error")
 const createButton = document.getElementById("create-button")
 const logInButton = document.getElementById("log-in-button")
 
+
 const enterUserInfo = () => {
     //if input bars are empty when submitting information
     if (!firstNameInput.value) {
