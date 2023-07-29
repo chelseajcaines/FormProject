@@ -18,40 +18,48 @@
 
     <body>
         <main>
-            <header>Sign Up Below</header>
+            <header>
+                Sign Up Below
+                <p class="form-disclaimer">All fields are required</p>
+            </header>
             <hr />
             <div class="user-content">
                 <form action="#" method="GET">
                     <fieldset>
                         <!-- First Name -->
                         <div class="input-box">
-                            <label for="first-name"> First Name </label>
+                            <label for="first-name"> First Name <strong class="required-field">*</strong></label>
+                            <p class="error-message" first-name-error>Sorry, that isn't a valid name</p>
                             <input
                                 type="text"
                                 id="first-name"
                                 placeholder="Jane"
                                 name="first-name"
                                 maxlength="32"
+                                pattern="^[A-Za-z]+$"
                                 required
                             />
                         </div>
 
                         <!-- Last Name -->
                         <div class="input-box">
-                            <label for="last-name">Last Name</label>
+                            <label for="last-name">Last Name <strong class="required-field">*</strong></label>
+                            <p class="error-message" last-name-error>Sorry, that isn't a valid name</p>
                             <input
                                 type="text"
                                 id="last-name"
                                 placeholder="Doe"
                                 name="last-name"
                                 maxlength="32"
+                                pattern="^[A-Za-z]+$"
                                 required
                             />
                         </div>
 
                         <!-- EMAIL -->
                         <div class="input-box">
-                            <label for="email">EMAIL</label>
+                            <label for="email">Email <strong class="required-field">*</strong></label>
+                            <p class="error-message" email-error>Sorry, that isn't a valid email address</p>
                             <input
                                 type="email"
                                 id="email"
@@ -63,20 +71,21 @@
 
                         <!-- Phone Number -->
                         <div class="input-box">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone">Phone Number <strong class="required-field">*</strong></label>
+                            <p class="error-message" phone-number-error>Sorry, that isn't a valid phone number</p>
                             <input
                                 type="tel"
                                 id="phone"
-                                placeholder="enter 10 digit number"
+                                placeholder="1234567890"
                                 name="phone"
-                                pattern="[0-9]{10}"
+                                pattern="^\d{10}$"
                                 required
                             />
                         </div>
 
                         <!-- Password -->
                         <div class="input-box">
-                            <label for="password">Password</label>
+                            <label for="password">Password <strong class="required-field">*</strong></label>
                             <input
                                 type="password"
                                 id="password"
@@ -90,18 +99,22 @@
 
                         <!-- Confirm Password -->
                         <div class="input-box">
-                            <label for="confirm">Confirm Password</label>
+                            <label for="confirm">Confirm Password <strong class="required-field">*</strong></label>
+                            
                             <input
                                 type="password"
                                 id="confirm"
                                 placeholder="re-enter password"
                                 name="password"
+                                minlength="6"
+                                maxlength="20"
                                 required
                             />
                             <p id="message"></p>
                         </div>
                     </fieldset>
-                    <button type="submit" id="submit" onclick="checkPassword()">
+                    <p class="password-message" password-error>Please ensure your passwords match and try again</p>
+                    <button type="submit" id="submit">
                         Create Account
                     </button>
                 </form>
