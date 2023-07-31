@@ -59,6 +59,17 @@ form.addEventListener("submit", (event) => {
         event.preventDefault()
     }
     // when everything is entered correctly, the form will submit and the page will refresh
+    localStorage.setItem(
+        'user_info', 
+        JSON.stringify(
+            {
+                first_name:   firstNameInput.value,
+                last_name:    lastNameInput.value,
+                email:        emailInput.value,
+                phone_number: phoneNumberInput.value,
+            }
+        )
+    )
 })
 
 const goToLogin = () => {
